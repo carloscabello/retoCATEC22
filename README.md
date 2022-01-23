@@ -18,4 +18,29 @@ Install the [PyTorch Stable 1.10.1](https://pytorch.org/get-started/locally/) ac
 pip install install torch torchvision torchaudio
 ```
 
+To run the notebooks locally install Jupyter Notebooks (optional):
 
+```shell
+pip install ipykernel notebook
+python -m ipykernel install --user --name=env
+```
+
+Install all dependencies:
+
+```shell
+pip install -r requirements.txt
+```
+
+## Inference
+
+A modified version of the `yolov5v6/detect.py` module is included so inference results are outputted in the format required by the challenge.
+
+```shell
+python yolov5v6/catecdetect.py --source 'test/images' --weights catecnetyv5nano.pt --nosave --save-txt --project inference --name detectcatec
+```
+
+## Training
+
+Training was done in an instance of [Gradient notebooks](https://gradient.run/).
+
+For more information on the training run, there is a [report](https://wandb.ai/carloscabello/YOLOv5/reports/YOLOv5-training-on-the-CATEC-dataset--VmlldzoxNDc1NDg3?accessToken=zjn68md1ugqsp8wirbmykc9arwr9l5in1cdo5cwjqkryvt573j0at39oik3mz5n5) made with [wandb](https://wandb.ai).
