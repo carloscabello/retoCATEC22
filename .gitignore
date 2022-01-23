@@ -105,8 +105,8 @@ dmypy.json
 .pyre/
 
 # Datasets
-dataset*/*
-Dataset*/*
+dataset*/
+Dataset*/
 
 # VSCode
 .vscode/*
